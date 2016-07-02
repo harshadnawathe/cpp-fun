@@ -5,7 +5,6 @@
 #include <iterator>
 #include <random>
 #include <type_traits>
-#include <vector>
 
 template < class RAItr, class Relation >
 void shift_down(RAItr heap, size_t i, const size_t max, Relation r) {
