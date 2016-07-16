@@ -12,7 +12,7 @@ FwdItr mid_point(FwdItr begin, FwdItr end )
     assert( std::distance(begin, end) > 1 ); //Pre-condition
     
     auto slow = std::next(begin);
-    auto fast = std::next(begin,2);
+    auto fast = std::next(slow);
     
     while(fast != end)
     {
