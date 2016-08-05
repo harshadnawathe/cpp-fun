@@ -1,3 +1,5 @@
+#ifndef _SYNCHRONIZE_H_
+#define _SYNCHRONIZE_H_
 
 #include <mutex>
 
@@ -42,3 +44,6 @@ private:
 	mutable T data_;
 	mutable std::mutex m_;
 };
+
+
+#endif
