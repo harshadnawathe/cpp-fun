@@ -31,6 +31,12 @@ public:
 	auto operator -> () const {
 		return Synchronizer{m_, &data_};
 	}
+
+	template < class F >
+	auto operator () (F f) {
+		std::lock_guard<std::mutex> lock{m_};
+		return f(data_);
+	}
 	
 private:
 	mutable T data_;
